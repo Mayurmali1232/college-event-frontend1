@@ -9,7 +9,7 @@ export default function Login() {
   const [errorMessage, setErrorMessage] = useState(""); // UI var error dakhvnyasathi
 
   const handleLogin = async () => {
-    setErrorMessage(""); // Survatila error clear kara
+    setErrorMessage(""); 
     try {
       const res = await API.post("/users/login", form);
       localStorage.setItem("user", JSON.stringify(res.data));
